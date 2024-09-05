@@ -1,11 +1,13 @@
 import './App.css';
+import AddEmployee from './Components/AddEmployee';
+import Navbar from './Components/Navbar';
 
-function App() {
+function App() { 
   return (
-    <div className="App">
-     
-    </div>
+  <>
+    <Navbar />
+    <AddEmployee />
+  </>
   );
 }
-//
 export default App;
