@@ -13,16 +13,16 @@ const AddEmployee = () => {
     
     const handdleChange = (e) => {
         const value = e.target.value;
-        setEmployee({...employee, [e.target.name]: value });
+        setEmployee({...Employee, [e.target.name]: value });
     };
 
     const saveEmployee = (e) => {
-        e.prefentDefault();
-        EmployeeService.saveEmployee(employee)
-        .then({response} => {
+        e.preventDefault();
+        EmployeeService.saveEmployee(Employee)
+        .then((response) => {
             console.log(response);
         })
-        .catch({error} => {
+        .catch((error) => {
             console.log(error);
         });
 
